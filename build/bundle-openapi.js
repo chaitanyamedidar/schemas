@@ -181,6 +181,10 @@ async function dereferenceOpenapiSpec(inputPath) {
   return $RefParser.dereference(inputPath);
 }
 
+function snakeToPascal(str) {
+  return str.split('_').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('');
+}
+
 /**
  * Bundle a single OpenAPI schema
  * @param {Object} pkg - Package definition
@@ -201,6 +205,49 @@ async function bundleSchema(pkg) {
   logger.step(`Bundling: ${pkg.name} (${pkg.version})...`);
 
   const dereferencedSpec = await dereferenceOpenapiSpec(inputPath);
+
+  // Inject templates as examples
+  const templatesDir = path.join(path.dirname(inputPath), "templates");
+  if (fs.existsSync(templatesDir)) {
+    const rawYaml = yaml.load(fs.readFileSync(inputPath, "utf-8"));
+    const rawSchemas = rawYaml?.components?.schemas || {};
+    
+    const templateFiles = fs.readdirSync(templatesDir).filter(f => f.endsWith("_template.json"));
+    
+    for (const templateFile of templateFiles) {
+      const baseName = templateFile.replace("_template.json", "");
+      const pascalName = snakeToPascal(baseName);
+      
+      let targetSchemaName = null;
+      
+      // Step 1: Direct match (e.g., connection_page -> ConnectionPage)
+      if (dereferencedSpec.components?.schemas?.[pascalName]) {
+        targetSchemaName = pascalName;
+      } else {
+        // Step 2: Reference match (e.g., design -> PatternFile referencing ./design.yaml)
+        const expectedYamlRef = `./${baseName}.yaml`;
+        const expectedJsonRef = `./${baseName}.json`;
+        
+        for (const [schemaName, schemaObj] of Object.entries(rawSchemas)) {
+          if (schemaObj.$ref === expectedYamlRef || schemaObj.$ref === expectedJsonRef) {
+            targetSchemaName = schemaName;
+            break;
+          }
+        }
+      }
+      
+      if (targetSchemaName && dereferencedSpec.components?.schemas?.[targetSchemaName]) {
+        try {
+          const templateContent = JSON.parse(fs.readFileSync(path.join(templatesDir, templateFile), "utf-8"));
+          dereferencedSpec.components.schemas[targetSchemaName].example = templateContent;
+          logger.info(`  Injected ${templateFile} as example for schema '${targetSchemaName}'`);
+        } catch (err) {
+          logger.warn(`  Failed to parse or inject template JSON ${templateFile}: ${err.message}`);
+        }
+      }
+    }
+  }
+
   fs.writeFileSync(outputPath, `${JSON.stringify(dereferencedSpec, null, 2)}\n`, "utf-8");
 
   logger.success(`Bundled: ${paths.relativePath(outputPath)}`);

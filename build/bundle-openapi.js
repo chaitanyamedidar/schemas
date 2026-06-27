@@ -225,11 +225,14 @@ async function bundleSchema(pkg) {
         targetSchemaName = pascalName;
       } else {
         // Step 2: Reference match (e.g., design -> PatternFile referencing ./design.yaml)
-        const expectedYamlRef = `./${baseName}.yaml`;
-        const expectedJsonRef = `./${baseName}.json`;
+        const expectedYamlRef = './' + baseName + '.yaml';
+        const expectedJsonRef = './' + baseName + '.json';
+        const expectedYamlRefAlt = baseName + '.yaml';
+        const expectedJsonRefAlt = baseName + '.json';
         
         for (const [schemaName, schemaObj] of Object.entries(rawSchemas)) {
-          if (schemaObj.$ref === expectedYamlRef || schemaObj.$ref === expectedJsonRef) {
+          const ref = schemaObj?.$ref;
+          if (ref === expectedYamlRef || ref === expectedJsonRef || ref === expectedYamlRefAlt || ref === expectedJsonRefAlt) {
             targetSchemaName = schemaName;
             break;
           }

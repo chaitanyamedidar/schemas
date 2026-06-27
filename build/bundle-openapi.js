@@ -215,7 +215,7 @@ async function bundleSchema(pkg) {
     const templateFiles = fs.readdirSync(templatesDir).filter(f => f.endsWith("_template.json"));
     
     for (const templateFile of templateFiles) {
-      const baseName = templateFile.replace("_template.json", "");
+      const baseName = templateFile.slice(0, -14);
       const pascalName = snakeToPascal(baseName);
       
       let targetSchemaName = null;

@@ -221,6 +221,9 @@ async function bundleSchema(pkg) {
       let targetSchemaName = null;
       
       // Step 1: Direct match (e.g., connection_page -> ConnectionPage)
+      if (!dereferencedSpec) {
+        throw new Error("Failed to dereference OpenAPI spec: spec is null or undefined");
+      }
       if (dereferencedSpec.components?.schemas?.[pascalName]) {
         targetSchemaName = pascalName;
       } else {

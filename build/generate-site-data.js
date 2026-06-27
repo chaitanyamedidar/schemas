@@ -114,17 +114,12 @@ function collectXInternalTags(repoRoot, version, construct) {
 
   // Check top-level x-internal and info.x-internal
   const addTags = (val) => {
-    if (val === undefined || val === null) {
-      return;
-    }
     if (Array.isArray(val)) {
       for (const tag of val) {
         tags.add(tag);
       }
     } else if (typeof val === "string") {
       tags.add(val);
-    } else {
-      throw new Error("Invalid x-internal configuration: expected string or array");
     }
   };
   

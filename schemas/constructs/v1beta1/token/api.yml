@@ -43,6 +43,8 @@ paths:
         - $ref: "#/components/parameters/search"
         - $ref: "#/components/parameters/order"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Tokens response
           content:
@@ -64,6 +66,8 @@ paths:
         - $ref: "#/components/parameters/name"
         - $ref: "#/components/parameters/purpose"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Token generated
           content:
@@ -86,6 +90,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/tokenId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Token deleted
           content:
@@ -110,6 +116,10 @@ paths:
       parameters:
         - $ref: "#/components/parameters/id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           description: Token response
           content:
@@ -135,6 +145,8 @@ paths:
         - $ref: "#/components/parameters/userId"
         - $ref: "#/components/parameters/provider"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Token generated
           content:
@@ -156,6 +168,8 @@ components:
       bearerFormat: JWT
 
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     400:
       $ref: "../core/api.yml#/components/responses/400"
     401:

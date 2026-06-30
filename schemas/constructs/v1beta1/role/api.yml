@@ -43,6 +43,8 @@ paths:
             schema:
               $ref: "#/components/schemas/RoleHolderRequest"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "201":
           description: Role holder added
         "400":
@@ -63,6 +65,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: Role deleted
         "400":
@@ -92,6 +96,10 @@ paths:
         - $ref: "#/components/parameters/selector"
         - $ref: "#/components/parameters/teamId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           description: Roles response
           content:
@@ -120,6 +128,8 @@ paths:
             schema:
               $ref: "#/components/schemas/Role"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Role upserted
           content:
@@ -152,6 +162,8 @@ paths:
               items:
                 $ref: "#/components/schemas/UserRoleUpdateRequest"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Role holders updated
         "400":
@@ -179,6 +191,8 @@ paths:
         - $ref: "#/components/parameters/search"
         - $ref: "#/components/parameters/order"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Keychains response
           content:
@@ -211,6 +225,8 @@ paths:
         - $ref: "#/components/parameters/roleId"
         - $ref: "#/components/parameters/keychainId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Keychain assigned to role
         "400":
@@ -233,6 +249,8 @@ paths:
         - $ref: "#/components/parameters/roleId"
         - $ref: "#/components/parameters/keychainId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: Keychain unassigned from role
         "400":
@@ -252,6 +270,8 @@ components:
       bearerFormat: JWT
 
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     400:
       $ref: "../core/api.yml#/components/responses/400"
     401:

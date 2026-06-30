@@ -45,6 +45,8 @@ paths:
         - $ref: "#/components/parameters/pagesize"
         - $ref: "#/components/parameters/filter"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Workspaces
           content:
@@ -65,6 +67,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/workspacePayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "201":
           description: Created workspace
           content:
@@ -89,6 +93,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/workspaceId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Workspace
           content:
@@ -115,6 +121,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/workspaceUpdatePayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Workspace
           content:
@@ -139,6 +147,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/workspaceId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: Workspace deleted
         "400":
@@ -166,6 +176,8 @@ paths:
         - $ref: "#/components/parameters/pagesize"
         - $ref: "#/components/parameters/filter"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Teams
           content:
@@ -193,6 +205,8 @@ paths:
         - $ref: "#/components/parameters/workspaceId"
         - $ref: "#/components/parameters/teamId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Workspace team mappings
           content:
@@ -218,6 +232,8 @@ paths:
         - $ref: "#/components/parameters/workspaceId"
         - $ref: "#/components/parameters/teamId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: Workspace team mapping removed
         "400":
@@ -245,6 +261,8 @@ paths:
         - $ref: "#/components/parameters/pagesize"
         - $ref: "#/components/parameters/filter"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Environments
           content:
@@ -272,6 +290,8 @@ paths:
         - $ref: "#/components/parameters/workspaceId"
         - $ref: "#/components/parameters/environmentId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Workspace environment mappings
           content:
@@ -297,6 +317,8 @@ paths:
         - $ref: "#/components/parameters/workspaceId"
         - $ref: "#/components/parameters/environmentId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: Workspace environment mapping removed
         "400":
@@ -325,6 +347,8 @@ paths:
         - $ref: "#/components/parameters/pagesize"
         - $ref: "#/components/parameters/filter"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Designs
           content:
@@ -353,6 +377,8 @@ paths:
         - $ref: "#/components/parameters/workspaceId"
         - $ref: "#/components/parameters/designId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Workspace design mappings
           content:
@@ -379,6 +405,8 @@ paths:
         - $ref: "#/components/parameters/workspaceId"
         - $ref: "#/components/parameters/designId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: Workspace design mapping removed
         "400":
@@ -407,6 +435,8 @@ paths:
         - $ref: "#/components/parameters/pagesize"
         - $ref: "#/components/parameters/filter"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Views
           content:
@@ -435,6 +465,8 @@ paths:
         - $ref: "#/components/parameters/workspaceId"
         - $ref: "#/components/parameters/viewId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Workspace view mappings
           content:
@@ -461,6 +493,8 @@ paths:
         - $ref: "#/components/parameters/workspaceId"
         - $ref: "#/components/parameters/viewId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: Workspace view mapping removed
         "400":
@@ -474,6 +508,8 @@ paths:
 
 components:
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     200:
       $ref: "../core/api.yml#/components/responses/200"
     400:

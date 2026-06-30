@@ -30,6 +30,8 @@ paths:
           format: uuid
         description: ID of the event to delete
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '204':
           description: Event deleted
         '400':
@@ -53,6 +55,8 @@ paths:
             schema:
               type: object
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '201':
           description: Event created
         '400':
@@ -74,6 +78,8 @@ paths:
             schema:
               $ref: '#/components/schemas/BulkDeleteRequest'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: event deleted
           content:
@@ -105,6 +111,8 @@ paths:
             schema:
               $ref: '#/components/schemas/BulkUpdateStatusRequest'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Events updated
           content:
@@ -144,6 +152,8 @@ paths:
             schema:
               $ref: '#/components/schemas/UpdateEventStatusRequest'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Event status updated
           content:
@@ -184,6 +194,8 @@ paths:
       - $ref: '#/components/parameters/search'
       - $ref: '#/components/parameters/order'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Workspace events
           content:
@@ -213,6 +225,8 @@ paths:
       parameters:
       - $ref: '#/components/parameters/cumulative'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Events aggregate
           content:
@@ -240,6 +254,8 @@ paths:
       - $ref: '#/components/parameters/order'
       - $ref: '#/components/parameters/eventsFilter'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Events page
           content:
@@ -267,6 +283,8 @@ paths:
       - $ref: '#/components/parameters/order'
       - $ref: '#/components/parameters/filter'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Event summary page
           content:
@@ -291,6 +309,8 @@ paths:
       - $ref: '#/components/parameters/page'
       - $ref: '#/components/parameters/pagesize'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Event types
           content:
@@ -307,6 +327,8 @@ paths:
           description: Server error
 components:
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     400:
       $ref: ../core/api.yml#/components/responses/400
     401:

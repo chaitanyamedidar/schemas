@@ -48,6 +48,8 @@ paths:
         style: form
         explode: true
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           content:
             application/json:
@@ -74,6 +76,8 @@ paths:
       parameters:
       - $ref: '#/components/parameters/subscriptionId'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           content:
             application/json:
@@ -104,6 +108,8 @@ paths:
             schema:
               $ref: '#/components/schemas/CreateSubscriptionRequest'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '201':
           description: A new subscription has been created
           content:
@@ -135,6 +141,8 @@ paths:
             schema:
               $ref: '#/components/schemas/UpgradeSubscriptionRequest'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           content:
             application/json:
@@ -168,6 +176,8 @@ paths:
             schema:
               $ref: '#/components/schemas/UpgradeSubscriptionRequest'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Preview of the upgraded subscription invoice
           content:
@@ -198,6 +208,8 @@ paths:
             schema:
               $ref: '#/components/schemas/WebhookEvent'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Webhook processed
         '400':
@@ -208,6 +220,8 @@ paths:
           $ref: '#/components/responses/500'
 components:
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     400:
       $ref: ../core/api.yml#/components/responses/400
     401:

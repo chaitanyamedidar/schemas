@@ -27,6 +27,8 @@ paths:
       parameters:
       - $ref: '#/components/parameters/invitationId'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Invitation fetched
           content:
@@ -51,6 +53,8 @@ paths:
       parameters:
       - $ref: '#/components/parameters/invitationId'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '204':
           description: Invitation deleted
         '400':
@@ -77,6 +81,8 @@ paths:
               $ref: '#/components/schemas/InvitationPayload'
         required: true
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Invitation updated
           content:
@@ -100,6 +106,8 @@ paths:
       - Invitation
       summary: Get all invitations for the organization
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Invitations page
           content:
@@ -126,6 +134,8 @@ paths:
               $ref: '#/components/schemas/InvitationPayload'
         required: true
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '201':
           description: Invitation created
           content:
@@ -149,6 +159,8 @@ paths:
       parameters:
       - $ref: '#/components/parameters/invitationId'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Invitation accepted
           content:
@@ -181,6 +193,8 @@ paths:
               type: object
               additionalProperties: true
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Invitation request accepted
           content:
@@ -213,6 +227,8 @@ paths:
               type: object
               additionalProperties: true
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '201':
           description: Signup request created
           content:
@@ -240,6 +256,8 @@ paths:
       - $ref: ../../v1beta2/core/api.yml#/components/parameters/order
       - $ref: ../../v1beta2/core/api.yml#/components/parameters/filter
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Signup requests page
           content:
@@ -259,6 +277,8 @@ paths:
       - Invitation
       summary: Approve a signup request
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Signup request approved
           content:
@@ -281,6 +301,8 @@ paths:
       - Invitation
       summary: Deny a signup request
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Signup request denied
           content:
@@ -303,6 +325,8 @@ paths:
       - Invitation
       summary: Get signup request notification summary
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Signup request notification payload
           content:
@@ -335,6 +359,8 @@ components:
         type: string
         format: uuid
   responses:
+    "403":
+      $ref: "../../v1beta2/core/api.yml#/components/responses/403"
     400:
       $ref: ../../v1beta2/core/api.yml#/components/responses/400
     401:

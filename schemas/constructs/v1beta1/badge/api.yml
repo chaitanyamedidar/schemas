@@ -31,6 +31,10 @@ paths:
         - $ref: "../core/api.yml#/components/parameters/id"
 
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "204":
           description: Badge deleted
         "401":
@@ -50,6 +54,10 @@ paths:
         - $ref: "../core/api.yml#/components/parameters/id"
 
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           content:
             application/json:
@@ -76,6 +84,8 @@ paths:
               $ref: "#/components/schemas/BadgePayload"
         required: true
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "201":
           content:
             application/json:
@@ -96,6 +106,8 @@ paths:
         - Badge
       summary: Get available badges
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Available badges
           content:
@@ -123,6 +135,8 @@ paths:
             schema:
               $ref: "#/components/schemas/BadgeAssignmentPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Badge assignment result
           content:
@@ -139,6 +153,8 @@ paths:
 
 components:
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     400:
       $ref: "../core/api.yml#/components/responses/400"
     401:

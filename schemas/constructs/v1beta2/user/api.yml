@@ -36,6 +36,8 @@ paths:
         - $ref: "#/components/parameters/filter"
         - $ref: "#/components/parameters/teamId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Paginated list of organization users
           content:
@@ -67,6 +69,8 @@ paths:
         - $ref: "#/components/parameters/order"
         - $ref: "#/components/parameters/filter"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Paginated list of public users
           content:
@@ -90,6 +94,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: User profile for the requested ID
           content:
@@ -113,6 +119,8 @@ paths:
       operationId: getUser
       summary: Get current user profile
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Current user profile and role context
           content:
@@ -125,6 +133,8 @@ paths:
           $ref: "#/components/responses/500"
 components:
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     400:
       $ref: "../core/api.yml#/components/responses/400"
     401:

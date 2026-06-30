@@ -70,6 +70,8 @@ paths:
           schema:
             type: boolean
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Designs response
           content:
@@ -94,6 +96,8 @@ paths:
             schema:
               $ref: "#/components/schemas/MesheryPatternRequestBody"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Design saved
           content:
@@ -122,6 +126,8 @@ paths:
             schema:
               $ref: "#/components/schemas/MesheryPatternDeleteRequestBody"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Designs deleted
         "400":
@@ -145,6 +151,8 @@ paths:
         - $ref: "#/components/parameters/search"
         - $ref: "#/components/parameters/order"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Pattern resources response
         "401":
@@ -159,6 +167,8 @@ paths:
       operationId: upsertPatternResource
       description: Creates or updates a pattern resource definition.
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Pattern resource saved
         "400":
@@ -178,6 +188,10 @@ paths:
       parameters:
         - $ref: "#/components/parameters/id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           description: Pattern resource response
         "401":
@@ -195,6 +209,10 @@ paths:
       parameters:
         - $ref: "#/components/parameters/id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "204":
           description: Pattern resource deleted
         "401":
@@ -214,6 +232,10 @@ paths:
       parameters:
         - $ref: "#/components/parameters/id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           description: Design response
           content:
@@ -235,6 +257,10 @@ paths:
       parameters:
         - $ref: "#/components/parameters/id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "204":
           description: Design deleted
         "401":
@@ -255,6 +281,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Design cloned
           content:
@@ -281,6 +309,10 @@ paths:
       parameters:
         - $ref: "#/components/parameters/id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           description: Design file content
           content:
@@ -323,6 +355,8 @@ paths:
               format: binary
               description: Opaque design source bytes (yaml, tarball, etc.)
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Design source content uploaded
         "400":
@@ -348,6 +382,8 @@ paths:
             schema:
               $ref: "#/components/schemas/MesheryPatternImportRequestBody"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Successful Import
           content:
@@ -428,6 +464,12 @@ paths:
           schema:
             type: boolean
       responses:
+        "401":
+          $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           description: Catalog content page
           content:
@@ -453,6 +495,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/catalogContentPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Catalog request result
           content:
@@ -485,6 +529,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/catalogContentPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Catalog request result
           content:
@@ -513,6 +559,8 @@ paths:
         - $ref: "#/components/parameters/page"
         - $ref: "#/components/parameters/pagesize"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Catalog content classes
           content:
@@ -536,6 +584,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/catalogContentPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "201":
           description: Request approved
           content:
@@ -562,6 +612,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/catalogContentPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "201":
           description: Request denied
           content:
@@ -588,6 +640,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Filter
           content:
@@ -620,6 +674,8 @@ paths:
               type: object
               additionalProperties: true
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Cloned filter
           content:
@@ -656,6 +712,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/resourceSharePayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Resource access mapping
           content:
@@ -695,6 +753,10 @@ paths:
           schema:
             type: string
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           description: Resource access actors
           content:
@@ -726,6 +788,8 @@ paths:
           schema:
             type: string
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Catalog requests page
           content:
@@ -744,6 +808,8 @@ components:
       bearerFormat: JWT
 
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     400:
       $ref: "../core/api.yml#/components/responses/400"
     401:

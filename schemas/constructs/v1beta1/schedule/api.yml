@@ -42,6 +42,8 @@ paths:
         - $ref: "#/components/parameters/search"
         - $ref: "#/components/parameters/order"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Schedules response
           content:
@@ -66,6 +68,8 @@ paths:
             schema:
               $ref: "#/components/schemas/Schedule"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Schedule upserted
           content:
@@ -90,6 +94,10 @@ paths:
       parameters:
         - $ref: "#/components/parameters/id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           description: Schedule response
           content:
@@ -112,6 +120,10 @@ paths:
       parameters:
         - $ref: "#/components/parameters/id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "204":
           description: Schedule deleted
         "401":
@@ -129,6 +141,8 @@ components:
       bearerFormat: JWT
 
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     400:
       $ref: "../core/api.yml#/components/responses/400"
     401:

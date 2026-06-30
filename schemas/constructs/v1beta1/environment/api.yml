@@ -24,6 +24,8 @@ tags:
     description: APIs for environments
 components:
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     200:
       $ref: "../core/api.yml#/components/responses/200"
     400:
@@ -171,6 +173,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/environmentPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "201":
           description: Created environment
           content:
@@ -197,6 +201,8 @@ paths:
         - $ref: "#/components/parameters/pagesize"
         - $ref: "#/components/parameters/orgIdQuery"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Environments
           content:
@@ -219,6 +225,8 @@ paths:
         - $ref: "#/components/parameters/environmentId"
         - $ref: "#/components/parameters/orgIdQuery"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Environment page
           content:
@@ -244,6 +252,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/environmentPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Environment page
           content:
@@ -267,6 +277,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/environmentId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: Environment deleted
         "400":
@@ -297,6 +309,8 @@ paths:
           schema:
             type: string
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Environment connections
           content:

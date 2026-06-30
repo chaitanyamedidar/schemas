@@ -28,6 +28,8 @@ tags:
 
 components:
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     200:
       $ref: "../core/api.yml#/components/responses/200"
     400:
@@ -289,6 +291,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/viewPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "201":
           description: Created view
           content:
@@ -339,6 +343,8 @@ paths:
           schema:
             type: string
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Views page
           content:
@@ -390,6 +396,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/viewId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: View
           content:
@@ -416,6 +424,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/viewPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Updated view
           content:
@@ -440,6 +450,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/viewId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: View deleted
         "400":

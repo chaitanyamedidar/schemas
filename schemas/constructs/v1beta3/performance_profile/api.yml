@@ -40,6 +40,8 @@ paths:
         - $ref: "#/components/parameters/search"
         - $ref: "#/components/parameters/order"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Performance profiles
           content:
@@ -62,6 +64,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/performanceProfilePayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Performance profile upserted
           content:
@@ -86,6 +90,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/performanceProfileId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Performance profile
           content:
@@ -112,6 +118,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/performanceProfilePayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Performance profile
           content:
@@ -136,6 +144,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/performanceProfileId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: Performance profile deleted
         "400":
@@ -162,6 +172,8 @@ paths:
         - $ref: "#/components/parameters/search"
         - $ref: "#/components/parameters/order"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Performance results
           content:
@@ -189,6 +201,8 @@ paths:
         - $ref: "#/components/parameters/performanceProfileId"
         - $ref: "#/components/parameters/resultId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Performance result
           content:
@@ -220,6 +234,8 @@ paths:
         - $ref: "#/components/parameters/from"
         - $ref: "#/components/parameters/to"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Performance results
           content:
@@ -235,6 +251,8 @@ paths:
 
 components:
   responses:
+    "403":
+      $ref: "../../v1beta2/core/api.yml#/components/responses/403"
     200:
       $ref: "../../v1alpha1/core/api.yml#/components/responses/200"
     400:

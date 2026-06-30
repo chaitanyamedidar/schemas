@@ -35,6 +35,8 @@ paths:
         - $ref: "#/components/parameters/order"
         - $ref: "#/components/parameters/all"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Organizations response
           content:
@@ -59,6 +61,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/organizationPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "201":
           description: Single-organization page response
           content:
@@ -86,6 +90,8 @@ paths:
           schema:
             type: string
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Successful response
           content:
@@ -111,6 +117,10 @@ paths:
       parameters:
         - $ref: "#/components/parameters/orgId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           description: Single-organization page response
           content:
@@ -135,6 +145,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/orgId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: Organization deleted
         "400":
@@ -159,6 +171,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/organizationPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Single-organization page response for the updated organization
           content:
@@ -186,6 +200,10 @@ paths:
       parameters:
         - $ref: "#/components/parameters/orgId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           description: Organization metadata, including preferences
           content:
@@ -219,6 +237,8 @@ paths:
             schema:
               $ref: "#/components/schemas/OrgTeamActionPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "201":
           description: Team added to organization or team tombstoned
           content:
@@ -250,6 +270,8 @@ paths:
         - $ref: "#/components/parameters/orgId"
         - $ref: "#/components/parameters/teamId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Team removed from organization
           content:
@@ -282,6 +304,8 @@ paths:
           schema:
             $ref: "../core/api.yml#/components/schemas/user_id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "201":
           description: User added to organization
           content:
@@ -313,6 +337,10 @@ paths:
           schema:
             $ref: "../core/api.yml#/components/schemas/user_id"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "204":
           description: User removed from organization
         "401":
@@ -330,6 +358,8 @@ components:
       bearerFormat: JWT
 
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     400:
       $ref: "../core/api.yml#/components/responses/400"
     401:

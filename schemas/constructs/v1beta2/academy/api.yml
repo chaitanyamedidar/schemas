@@ -49,6 +49,8 @@ paths:
           items:
             type: string
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: A list of content with total count
           content:
@@ -77,6 +79,8 @@ paths:
             schema:
               $ref: '#/components/schemas/CreateAcademyCurriculaRequest'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '201':
           description: created the curricula
           content:
@@ -192,6 +196,8 @@ paths:
         schema:
           type: integer
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: A list of content with total count
           content:
@@ -230,6 +236,8 @@ paths:
         schema:
           type: string
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: A single academy content
           content:
@@ -259,6 +267,8 @@ paths:
             schema:
               $ref: '#/components/schemas/RegisterToAcademyContentRequest'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '201':
           description: registered content
           content:
@@ -282,6 +292,8 @@ paths:
       parameters:
       - $ref: '#/components/parameters/id'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: registered content
           content:
@@ -314,6 +326,8 @@ paths:
             schema:
               $ref: '#/components/schemas/CreateAcademyCurriculaRequest'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: updated the curricula
           content:
@@ -339,6 +353,8 @@ paths:
       parameters:
       - $ref: '#/components/parameters/id'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '204':
           description: Curricula deleted
         '400':
@@ -360,6 +376,8 @@ paths:
       parameters:
       - $ref: '#/components/parameters/id'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: A single curricula
           content:
@@ -396,6 +414,8 @@ paths:
         schema:
           type: string
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Registration data for the specified content
           content:
@@ -432,6 +452,8 @@ paths:
             schema:
               $ref: '#/components/schemas/UpdateCurrentItemRequest'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Progress tracker updated
           content:
@@ -471,6 +493,8 @@ paths:
         schema:
           type: string
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: A single test
           content:
@@ -501,6 +525,8 @@ paths:
             schema:
               $ref: '#/components/schemas/StartTestRequest'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: A single test
           content:
@@ -540,6 +566,8 @@ paths:
         schema:
           type: string
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: A list of tests for the specified registration
           content:
@@ -571,6 +599,8 @@ paths:
             schema:
               $ref: '#/components/schemas/QuizSubmission'
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: Progress tracker updated
           content:
@@ -601,6 +631,8 @@ paths:
       summary: Get academy content summary
       description: Returns a summary of all academy content with  metrics.
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: A list of content with total count and registration metrics
           content:
@@ -656,6 +688,8 @@ paths:
           items:
             type: string
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: List of registrations with pagination info
           content:
@@ -685,6 +719,8 @@ paths:
         schema:
           type: string
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         '200':
           description: A single certificate
           content:
@@ -701,6 +737,8 @@ paths:
           description: Server error
 components:
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     400:
       $ref: ../core/api.yml#/components/responses/400
     401:

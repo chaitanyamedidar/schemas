@@ -1032,7 +1032,13 @@ components:
           schema:
             type: string
     "401":
-      description: Expired JWT token used or insufficient privilege
+      description: Not authenticated. The JWT token is missing, expired, or malformed.
+      content:
+        text/plain:
+          schema:
+            type: string
+    "403":
+      description: Forbidden. The request was authenticated but the caller does not have the required privilege to perform this action.
       content:
         text/plain:
           schema:

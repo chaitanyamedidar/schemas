@@ -29,6 +29,8 @@ tags:
 
 components:
   responses:
+    "403":
+      $ref: "../core/api.yml#/components/responses/403"
     200:
       $ref: "../core/api.yml#/components/responses/200"
     400:
@@ -213,6 +215,10 @@ paths:
         - $ref: "#/components/parameters/page"
         - $ref: "#/components/parameters/pagesize"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           description: Teams
           content:
@@ -237,6 +243,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/teamPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "201":
           description: Created team
           content:
@@ -264,6 +272,8 @@ paths:
         - $ref: "#/components/parameters/orgId"
         - $ref: "#/components/parameters/teamId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Team
           content:
@@ -291,6 +301,8 @@ paths:
       requestBody:
         $ref: "#/components/requestBodies/teamUpdatePayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Updated team
           content:
@@ -316,6 +328,8 @@ paths:
         - $ref: "#/components/parameters/orgId"
         - $ref: "#/components/parameters/teamId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: Team deleted
         "400":
@@ -342,6 +356,8 @@ paths:
         - $ref: "#/components/parameters/page"
         - $ref: "#/components/parameters/pagesize"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Team users mapping
           content:
@@ -375,6 +391,8 @@ paths:
             $ref: ../core/api.yml#/components/schemas/user_id
           required: true
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "201":
           description: User added to team
           content:
@@ -406,6 +424,8 @@ paths:
             $ref: ../core/api.yml#/components/schemas/user_id
           required: true
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "204":
           description: User removed from team
         "400":
@@ -432,6 +452,8 @@ paths:
         - $ref: "#/components/parameters/page"
         - $ref: "#/components/parameters/pagesize"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Users not currently in the team
           content:

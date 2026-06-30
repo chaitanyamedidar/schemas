@@ -27,8 +27,7 @@ components:
       maxLength: 100
       description: API version of the object, optionally prefixed with an API group (e.g. "group.example.io/v1beta1" or bare "v1beta1").
       pattern: "^([a-z][a-z0-9.-]*\\/)?v(alpha|beta|[0-9]+)([.-][a-z0-9]+)*$"
-      example:
-        ["v1", "v1alpha1", "v2beta3", "v1.custom-suffix", "models.meshery.io/v1beta1", "capability.meshery.io/v1alpha1"]
+      example: ["v1", "v1alpha1", "v2beta3", "v1.custom-suffix", "models.meshery.io/v1beta1", "capability.meshery.io/v1alpha1"]
 
     semverString:
       type: string
@@ -1037,7 +1036,7 @@ components:
           schema:
             type: string
     "401":
-      description: Expired JWT token used or insufficient privilege
+      description: Not authenticated. The JWT token is missing, expired, or malformed.
       content:
         text/plain:
           schema:
@@ -1056,6 +1055,12 @@ components:
             type: string
     "500":
       description: Internal server error
+      content:
+        text/plain:
+          schema:
+            type: string
+    '403':
+      description: Forbidden. The request was authenticated but the caller does not have the required privilege to perform this action.
       content:
         text/plain:
           schema:

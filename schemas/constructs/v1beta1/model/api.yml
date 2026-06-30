@@ -45,12 +45,16 @@ paths:
                   message:
                     type: string
         "400":
-          description: Invalid request format
+          $ref: "#/components/responses/400"
         "401":
           $ref: "#/components/responses/401"
+        "404":
+          $ref: "#/components/responses/404"
         "500":
-          description: Internal server error
+          $ref: "#/components/responses/500"
 
+        '403':
+          $ref: '#/components/responses/403'
   /api/integrations/meshmodels/models:
     get:
       x-internal: ["cloud"]
@@ -86,15 +90,29 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/MeshModelModelsPage"
+        "400":
+          $ref: "#/components/responses/400"
         "401":
           $ref: "#/components/responses/401"
+        "404":
+          $ref: "#/components/responses/404"
         "500":
-          description: Internal server error
+          $ref: "#/components/responses/500"
+        '403':
+          $ref: '#/components/responses/403'
 components:
   responses:
-    401:
+    "400":
+      $ref: "../core/api.yml#/components/responses/400"
+    "401":
       $ref: "../core/api.yml#/components/responses/401"
+    "404":
+      $ref: "../core/api.yml#/components/responses/404"
+    "500":
+      $ref: "../core/api.yml#/components/responses/500"
 
+    '403':
+      $ref: ../../v1beta1/core/api.yml#/components/responses/403
   securitySchemes:
     jwt:
       type: http
@@ -131,8 +149,7 @@ components:
     ModelReference:
       x-generate-db-helpers: true
       type: "object"
-      "required":
-        ["id", "name", "version", "displayName", "model", "registrant"]
+      "required": ["id", "name", "version", "displayName", "model", "registrant"]
       "properties":
         id:
           "$ref": "../core/api.yml#/components/schemas/uuid"
@@ -177,12 +194,7 @@ components:
           title: "Upload method"
           x-enum-casing-exempt: true
           enum: ["file", "urlImport", "csv", "url"]
-          enumDescriptions:
-            [
-              "Upload a model file (.tar, .tar.gz, .tgz) from your local system",
-              "Import a model file using a direct URL to the source",
-              "Upload separate CSV files for model definitions, components, and their relationships",
-            ]
+          enumDescriptions: ["Upload a model file (.tar, .tar.gz, .tgz) from your local system", "Import a model file using a direct URL to the source", "Upload separate CSV files for model definitions, components, and their relationships"]
           description: "Choose the method you prefer to upload your model file. Select 'File Import' or 'CSV Import' if you have the file on your local system or 'URL Import' if you have the file hosted online."
         register:
           type: boolean

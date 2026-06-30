@@ -62,6 +62,8 @@ paths:
             type: string
             format: uuid
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Filters response
           content:
@@ -86,6 +88,8 @@ paths:
             schema:
               $ref: "#/components/schemas/MesheryFilterRequestBody"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Filter saved
           content:
@@ -117,6 +121,8 @@ paths:
             schema:
               $ref: "#/components/schemas/MesheryFilterDeleteRequestBody"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Filters deleted
         "400":
@@ -136,6 +142,8 @@ paths:
       parameters:
         - $ref: "#/components/parameters/filterId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Filter response
           content:
@@ -170,6 +178,8 @@ paths:
             schema:
               $ref: "#/components/schemas/MesheryFilterPayload"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Filter updated
           content:
@@ -193,6 +203,10 @@ paths:
       parameters:
         - $ref: "#/components/parameters/filterId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "204":
           description: Filter deleted
         "401":
@@ -219,6 +233,8 @@ paths:
             schema:
               $ref: "#/components/schemas/MesheryFilterCloneRequestBody"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
         "200":
           description: Filter cloned
           content:
@@ -249,6 +265,10 @@ paths:
       parameters:
         - $ref: "#/components/parameters/filterId"
       responses:
+        "403":
+          $ref: "#/components/responses/403"
+        "400":
+          $ref: "#/components/responses/400"
         "200":
           description: Filter file content
           content:
@@ -271,6 +291,8 @@ components:
       bearerFormat: JWT
 
   responses:
+    "403":
+      $ref: "../../v1beta2/core/api.yml#/components/responses/403"
     400:
       $ref: "../../v1beta2/core/api.yml#/components/responses/400"
     401:

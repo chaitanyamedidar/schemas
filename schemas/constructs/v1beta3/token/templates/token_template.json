@@ -1,12 +1,12 @@
 {
-  "id": "",
-  "owner": "",
-  "provider": "",
+  "id": "11111111-1111-4111-8111-111111111111",
+  "owner": "11111111-1111-4111-8111-111111111111",
+  "provider": "github",
   "accessToken": "",
   "refreshToken": "",
-  "name": "",
-  "purpose": "",
+  "name": "Meshery Access Token",
+  "purpose": "API documentation example token",
   "isOauth": false,
-  "createdAt": "",
-  "updatedAt": ""
+  "createdAt": "2025-01-01T00:00:00Z",
+  "updatedAt": "2025-01-01T00:00:00Z"
 }

@@ -1,12 +1,11 @@
-schemaVersion: ''
+schemaVersion: capability.meshery.io/v1beta1
 version: v0.0.1
-displayName: ''
-description: ''
+displayName: Performance Test
+description: Initiate a performance test for API documentation examples.
 kind: {}
-type: ''
-subType: ''
-key: ''
+type: operator
+subType: perf-test
+key: performance-test
 entityState: []
 status: enabled
 metadata: {}
-

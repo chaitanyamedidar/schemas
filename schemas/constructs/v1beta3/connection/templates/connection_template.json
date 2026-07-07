@@ -1,9 +1,9 @@
 {
-  "id": "00000000-0000-0000-0000-000000000000",
-  "name": "",
-  "description": "",
-  "url": "",
-  "credentialId": "00000000-0000-0000-0000-000000000000",
+  "id": "11111111-1111-4111-8111-111111111111",
+  "name": "Production Kubernetes Connection",
+  "description": "Connection to the production Kubernetes cluster.",
+  "url": "https://kubernetes.example.com",
+  "credentialId": "11111111-1111-4111-8111-111111111111",
   "type": "platform",
   "subType": "orchestration",
   "kind": "kubernetes",
@@ -34,9 +34,9 @@
       }
     ]
   },
-  "owner": "00000000-0000-0000-0000-000000000000",
-  "createdAt": "0001-01-01T00:00:00Z",
-  "updatedAt": "0001-01-01T00:00:00Z",
+  "owner": "11111111-1111-4111-8111-111111111111",
+  "createdAt": "2025-01-01T00:00:00Z",
+  "updatedAt": "2025-01-01T00:00:00Z",
   "deletedAt": null,
   "environments": [],
   "schemaVersion": "connections.meshery.io/v1beta3"

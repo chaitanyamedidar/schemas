@@ -1,11 +1,11 @@
 {
-  "id": "00000000-0000-0000-0000-000000000000",
-  "owner": "00000000-0000-0000-0000-000000000000",
-  "function": "",
-  "category": "",
-  "subcategory": "",
-  "description": "",
-  "created_at": "0001-01-01T00:00:00Z",
-  "updated_at": "0001-01-01T00:00:00Z",
+  "id": "11111111-1111-4111-8111-111111111111",
+  "owner": "11111111-1111-4111-8111-111111111111",
+  "function": "source",
+  "category": "security",
+  "subcategory": "credentials",
+  "description": "A sample key used in API documentation examples.",
+  "created_at": "2025-01-01T00:00:00Z",
+  "updated_at": "2025-01-01T00:00:00Z",
   "deleted_at": null
 }

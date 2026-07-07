@@ -1,8 +1,7 @@
-publishedVersion: ''
+publishedVersion: v1.0.0
 class: {}
 compatibility: {}
-pattern_caveats: ''
-pattern_info: ''
+pattern_caveats: No caveats for the sample catalog entry.
+pattern_info: Sample catalog content for API documentation.
 type: Deployment
 snapshotURL: {}
-

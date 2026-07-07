@@ -1,16 +1,16 @@
-id: ''
-owner_id: ''
+id: 11111111-1111-4111-8111-111111111111
+owner_id: 11111111-1111-4111-8111-111111111111
 is_default: false
-name: ''
-description: ''
+name: Invitation Example
+description: Sample invitation used for API documentation examples.
 emails: []
-org_id: ''
+org_id: 11111111-1111-4111-8111-111111111111
 expires_at: ''
 quota: 0
 accepted_by: []
 roles: []
 teams: []
-status: ''
-created_at: ''
-updated_at: ''
-deleted_at: ''
+status: pending
+created_at: '2025-01-01T00:00:00Z'
+updated_at: '2025-01-01T00:00:00Z'
+deleted_at: null

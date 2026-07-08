@@ -95,3 +95,5 @@ properties:
     x-go-type: core.NullTime
     x-go-import: database/sql
     x-order: 10
+
+x-meshery-example: "./templates/environment_template.json"

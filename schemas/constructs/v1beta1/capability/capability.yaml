@@ -117,3 +117,5 @@ default:
     subType: body-text
     type: style
     version: 0.7.0
+
+x-meshery-example: "./templates/capability_template.json"

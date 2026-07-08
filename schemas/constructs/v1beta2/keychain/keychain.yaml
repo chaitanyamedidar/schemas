@@ -65,3 +65,5 @@ properties:
       db: deleted_at
       json: "deletedAt,omitempty"
     x-order: 6
+
+x-meshery-example: "./templates/keychain_template.json"

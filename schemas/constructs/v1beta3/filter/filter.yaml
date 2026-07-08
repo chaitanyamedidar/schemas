@@ -83,3 +83,5 @@ properties:
     x-oapi-codegen-extra-tags:
       db: updated_at
     x-order: 10
+
+x-meshery-example: "./templates/filter_template.json"

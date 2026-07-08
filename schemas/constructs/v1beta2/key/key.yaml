@@ -92,3 +92,5 @@ properties:
       db: deleted_at
       json: "deletedAt,omitempty"
     x-order: 9
+
+x-meshery-example: "./templates/key_template.json"

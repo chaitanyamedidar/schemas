@@ -133,3 +133,5 @@ definitions:
               $ref: "#/definitions/selector"
             to:
               $ref: "#/definitions/selector"
+
+x-meshery-example: "./templates/selector_template.json"

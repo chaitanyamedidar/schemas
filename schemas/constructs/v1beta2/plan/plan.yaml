@@ -60,3 +60,5 @@ properties:
       db: currency
       json: currency
       csv: currency
+
+x-meshery-example: "./templates/plan_template.json"

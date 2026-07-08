@@ -144,3 +144,5 @@ properties:
       yaml: "selectors,omitempty"
       json: "selectors,omitempty"
       gorm: "type:bytes;serializer:json"
+
+x-meshery-example: "./templates/relationship_template.json"

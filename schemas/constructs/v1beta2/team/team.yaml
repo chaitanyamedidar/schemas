@@ -66,3 +66,5 @@ properties:
       db: deleted_at
       json: deletedAt
     x-order: 8
+
+x-meshery-example: "./templates/team_template.json"

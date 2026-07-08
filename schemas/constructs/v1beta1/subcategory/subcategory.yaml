@@ -56,3 +56,5 @@ maxLength: 100
 x-oapi-codegen-extra-tags:
   yaml: subCategory
   json: subCategory
+
+x-meshery-example: "./templates/subcategory_template.json"

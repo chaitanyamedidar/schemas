@@ -96,3 +96,5 @@ properties:
       db: updated_at
       json: updatedAt
     x-order: 10
+
+x-meshery-example: "./templates/token_template.json"

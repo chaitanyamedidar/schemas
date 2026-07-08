@@ -203,3 +203,5 @@ properties:
     x-oapi-codegen-extra-tags:
       db: updated_at
       json: updatedAt
+
+x-meshery-example: "./templates/performance_profile_template.json"

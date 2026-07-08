@@ -321,3 +321,5 @@ required:
   - component
   - createdAt
   - updatedAt
+
+x-meshery-example: "./templates/component_template.json"

@@ -64,3 +64,5 @@ properties:
     x-oapi-codegen-extra-tags:
       db: deleted_at
     x-order: 9
+
+x-meshery-example: "./templates/key_template.json"

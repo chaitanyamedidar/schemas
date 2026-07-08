@@ -36,3 +36,5 @@ required:
 - user_id
 - category
 - action
+
+x-meshery-example: "./templates/event_template.json"

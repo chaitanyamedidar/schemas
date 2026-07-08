@@ -87,3 +87,5 @@ properties:
     x-oapi-codegen-extra-tags:
       db: updated_at
     x-order: 9
+
+x-meshery-example: "./templates/pattern_resource_template.json"

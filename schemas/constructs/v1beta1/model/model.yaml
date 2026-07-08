@@ -270,3 +270,5 @@ required:
   - componentsCount
   - components
   - relationships
+
+x-meshery-example: "./templates/model_template.json"

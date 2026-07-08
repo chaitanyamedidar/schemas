@@ -63,3 +63,5 @@ required:
   - patternCaveats
   - patternInfo
   - type
+
+x-meshery-example: "./templates/catalog_template.json"

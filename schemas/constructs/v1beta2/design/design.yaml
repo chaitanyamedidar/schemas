@@ -72,3 +72,4 @@ required:
   - version
   - components
   - relationships
+x-meshery-example: "./templates/design_template.json"

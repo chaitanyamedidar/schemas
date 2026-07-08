@@ -40,3 +40,5 @@ properties:
     x-oapi-codegen-extra-tags:
       db: deleted_at
     x-order: 6
+
+x-meshery-example: "./templates/keychain_template.json"

@@ -107,3 +107,5 @@ properties:
       json: billingId
     maxLength: 500
     pattern: '^[A-Za-z0-9_\-]+$'
+
+x-meshery-example: "./templates/subscription_template.json"

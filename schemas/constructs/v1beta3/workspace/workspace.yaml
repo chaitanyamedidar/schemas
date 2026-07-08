@@ -72,3 +72,5 @@ properties:
     x-oapi-codegen-extra-tags:
       db: deleted_at
       json: "deletedAt,omitempty"
+
+x-meshery-example: "./templates/workspace_template.json"

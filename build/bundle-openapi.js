@@ -201,6 +201,33 @@ async function bundleSchema(pkg) {
   logger.step(`Bundling: ${pkg.name} (${pkg.version})...`);
 
   const dereferencedSpec = await dereferenceOpenapiSpec(inputPath);
+
+  // Recursively walk the entire object to inject templates and clean up x-meshery-example tags everywhere
+  function recursiveInjectAndClean(obj, currentDir) {
+    if (Array.isArray(obj)) {
+      obj.forEach(item => recursiveInjectAndClean(item, currentDir));
+    } else if (obj && typeof obj === 'object') {
+      if (obj['x-meshery-example']) {
+        const examplePath = obj['x-meshery-example'];
+        const absolutePath = path.join(currentDir, examplePath);
+        try {
+          const content = fs.readFileSync(absolutePath, 'utf-8');
+          obj.example = JSON.parse(content);
+          logger.info(`  Injected ${examplePath} as example`);
+        } catch (err) {
+          // It's normal for this to fail if the tag originated from an inline external reference.
+          // It will be injected when that external schema is bundled independently.
+        }
+        delete obj['x-meshery-example']; // Clean up so it never leaks
+      }
+      Object.values(obj).forEach(val => recursiveInjectAndClean(val, currentDir));
+    }
+  }
+
+  if (dereferencedSpec) {
+    recursiveInjectAndClean(dereferencedSpec, path.dirname(inputPath));
+  }
+
   fs.writeFileSync(outputPath, `${JSON.stringify(dereferencedSpec, null, 2)}\n`, "utf-8");
 
   logger.success(`Bundled: ${paths.relativePath(outputPath)}`);

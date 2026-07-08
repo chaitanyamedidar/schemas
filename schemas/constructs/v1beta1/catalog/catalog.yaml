@@ -59,3 +59,5 @@ required:
   - pattern_caveats
   - pattern_info
   - type
+
+x-meshery-example: "./templates/catalog_template.json"

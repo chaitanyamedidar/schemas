@@ -81,3 +81,5 @@ properties:
     $ref: './api.yml#/components/schemas/AcademyCurriculaDeletedAt'
   metadata:
     $ref: './api.yml#/components/schemas/AcademyCurriculaMetadata'
+
+x-meshery-example: "./templates/academy_template.json"

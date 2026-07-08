@@ -61,3 +61,5 @@ required:
 - owner
 - category
 - action
+
+x-meshery-example: "./templates/event_template.json"

@@ -143,3 +143,5 @@ properties:
     x-oapi-codegen-extra-tags:
       db: deleted_at
       json: deletedAt
+
+x-meshery-example: "./templates/invitation_template.json"

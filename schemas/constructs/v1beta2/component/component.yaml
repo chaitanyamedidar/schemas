@@ -299,3 +299,5 @@ required:
   - model
   - modelReference
   - component
+
+x-meshery-example: "./templates/component_template.json"

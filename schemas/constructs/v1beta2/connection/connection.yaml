@@ -138,3 +138,5 @@ properties:
       db: "-"
       gorm: "-"
     default: connections.meshery.io/v1beta2
+
+x-meshery-example: "./templates/connection_template.json"

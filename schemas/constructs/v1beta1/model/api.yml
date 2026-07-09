@@ -48,6 +48,8 @@ paths:
           description: Invalid request format
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Internal server error
 
@@ -88,12 +90,16 @@ paths:
                 $ref: "#/components/schemas/MeshModelModelsPage"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Internal server error
 components:
   responses:
     401:
       $ref: "../core/api.yml#/components/responses/401"
+    "403":
+      $ref: "#/components/responses/403"
 
   securitySchemes:
     jwt:

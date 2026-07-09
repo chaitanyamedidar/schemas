@@ -50,6 +50,8 @@ paths:
                 $ref: "#/components/schemas/SchedulePage"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           $ref: "#/components/responses/500"
     post:
@@ -76,6 +78,8 @@ paths:
           $ref: "#/components/responses/400"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           $ref: "#/components/responses/500"
 
@@ -98,6 +102,8 @@ paths:
                 $ref: "#/components/schemas/Schedule"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           $ref: "#/components/responses/404"
         "500":
@@ -116,6 +122,8 @@ paths:
           description: Schedule deleted
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           $ref: "#/components/responses/404"
         "500":
@@ -133,6 +141,8 @@ components:
       $ref: "../core/api.yml#/components/responses/400"
     401:
       $ref: "../core/api.yml#/components/responses/401"
+    "403":
+      $ref: "#/components/responses/403"
     404:
       $ref: "../core/api.yml#/components/responses/404"
     500:

@@ -43,6 +43,8 @@ paths:
           description: No content
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           $ref: "#/components/responses/500"
     post:
@@ -67,6 +69,8 @@ paths:
           $ref: "#/components/responses/400"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           $ref: "#/components/responses/500"
 
@@ -94,6 +98,8 @@ paths:
                 $ref: "#/components/schemas/Organization"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           description: Organization not found
         "500":
@@ -119,6 +125,8 @@ paths:
                 $ref: "#/components/schemas/OrganizationPage"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           $ref: "#/components/responses/404"
         "500":
@@ -141,6 +149,8 @@ paths:
           $ref: "#/components/responses/400"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           $ref: "#/components/responses/404"
         "500":
@@ -169,6 +179,8 @@ paths:
           $ref: "#/components/responses/400"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           $ref: "#/components/responses/404"
         "500":
@@ -194,6 +206,8 @@ paths:
                 $ref: "#/components/schemas/OrgMetadata"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           $ref: "#/components/responses/404"
         "500":
@@ -231,6 +245,8 @@ paths:
           description: Bad request
         "401":
           description: Unauthorized
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           description: Not found
         "500":
@@ -260,6 +276,8 @@ paths:
           description: Bad request
         "401":
           description: Unauthorized
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           description: Not found
         "500":
@@ -289,6 +307,8 @@ paths:
           $ref: "#/components/responses/400"
         "401":
           description: Unauthorized
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           $ref: "#/components/responses/404"
         "500":
@@ -309,6 +329,8 @@ paths:
           description: User removed from organization
         "401":
           description: Unauthorized
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           $ref: "#/components/responses/404"
         "500":
@@ -326,6 +348,8 @@ components:
       $ref: "../../v1alpha1/core/api.yml#/components/responses/400"
     401:
       $ref: "../../v1alpha1/core/api.yml#/components/responses/401"
+    "403":
+      $ref: "#/components/responses/403"
     404:
       $ref: "../../v1alpha1/core/api.yml#/components/responses/404"
     500:

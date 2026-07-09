@@ -58,6 +58,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Server error
 
@@ -86,6 +88,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Server error
 
@@ -206,6 +210,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Server error
 
@@ -242,6 +248,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           $ref: "#/components/responses/404"
         "500":
@@ -272,6 +280,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Server error
 
@@ -296,6 +306,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           $ref: "#/components/responses/404"
         "500":
@@ -328,6 +340,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           description: Curricula not found
         "500":
@@ -349,6 +363,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           description: Curricula not found
         "500":
@@ -374,6 +390,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           description: Curricula not found
         "500":
@@ -413,6 +431,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           description: Content not found
         "500":
@@ -453,6 +473,8 @@ paths:
                 $ref: "#/components/schemas/ErrorResponse"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           $ref: "#/components/responses/404"
         "500":
@@ -488,6 +510,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           description: Quiz not found
         "500":
@@ -520,6 +544,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           description: Quiz not found
         "500":
@@ -562,6 +588,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           description: Registration not found
         "500":
@@ -596,6 +624,8 @@ paths:
                 $ref: "#/components/schemas/ErrorResponse"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Server error
           content:
@@ -622,6 +652,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Server error
 
@@ -677,6 +709,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Server error
 
@@ -707,6 +741,8 @@ paths:
           description: Invalid request parameters
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "404":
           description: Certificate not found
         "500":
@@ -718,6 +754,8 @@ components:
       $ref: "../core/api.yml#/components/responses/400"
     401:
       $ref: "../core/api.yml#/components/responses/401"
+    "403":
+      $ref: "#/components/responses/403"
     404:
       $ref: "../core/api.yml#/components/responses/404"
     500:

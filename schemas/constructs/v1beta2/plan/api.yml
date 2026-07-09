@@ -49,6 +49,8 @@ components:
       $ref: ../core/api.yml#/components/responses/400
     401:
       $ref: ../core/api.yml#/components/responses/401
+    "403":
+      $ref: "#/components/responses/403"
     500:
       $ref: ../core/api.yml#/components/responses/500
   securitySchemes:

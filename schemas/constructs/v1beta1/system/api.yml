@@ -75,6 +75,8 @@ paths:
                 $ref: "#/components/schemas/SystemDatabaseSummary"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Internal server error
 
@@ -95,6 +97,8 @@ paths:
                 $ref: "#/components/schemas/SystemMessageResponse"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Internal server error during reset (archive, drop, migrate, or reseed).
 
@@ -145,6 +149,8 @@ paths:
           description: Invalid request payload or malformed recipient email address.
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Email configuration validation failed or the send attempt errored.
 
@@ -165,6 +171,8 @@ paths:
                 $ref: "#/components/schemas/SystemSessionSync"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Marshal error while serializing the session sync payload.
 
@@ -196,6 +204,8 @@ paths:
                 $ref: "#/components/schemas/ControllerStatus"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Internal server error while resolving controller status.
 
@@ -226,6 +236,8 @@ paths:
                 $ref: "#/components/schemas/ControllerInfo"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Internal server error while resolving controller status.
 
@@ -257,6 +269,8 @@ paths:
                 $ref: "#/components/schemas/ControllerInfo"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Internal server error while resolving controller status.
 
@@ -292,6 +306,8 @@ paths:
                 $ref: "#/components/schemas/ConnectionDiagnostics"
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
         "500":
           description: Internal server error while resolving controller diagnostics.
 
@@ -334,11 +350,15 @@ paths:
                   ControllerStatus items.
         "401":
           $ref: "#/components/responses/401"
+        "403":
+          $ref: "#/components/responses/403"
 
 components:
   responses:
     401:
       $ref: "../../v1alpha1/core/api.yml#/components/responses/401"
+    "403":
+      $ref: "#/components/responses/403"
 
   securitySchemes:
     jwt:
